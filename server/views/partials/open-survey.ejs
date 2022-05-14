@@ -1,0 +1,50 @@
+<%- include header.ejs %>
+
+<%- include main_nav.ejs %>
+
+  <div class="container section-padding">
+      <div class="row justify-content-md-center">
+          <div class="col-lg-12">
+              <h1 class="lead text-center text-heading">Survey List</h1>
+                  <table class="table table-bordered mt-5">
+                    <thead>
+                      <tr>
+                        <td style="width:70%" scope="col"><b>Survey Name</b></td>
+                        <td style="width:15%" scope="col"><b>Expiry Date</b></td>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <% for(let count =0; count < SurveyList.length; count++) { 
+                        
+                      
+                        %>
+                      
+                      
+                        <tr>
+                        <td scope="row"><p><%= SurveyList[count].name %></p></td>
+                        <td scope="row"><p><%= SurveyList[count].date %></p></td>
+                        <td>
+                            <div class="text-center">
+                                <a href="/list/take/<%= SurveyList[count].id %>" class="btn btn-primary shadow-none take-button m-2">Take Survey</a>
+                              <!--<a href="list/edit/<%= SurveyList[count]._id %>" class="btn btn-warning shadow-none edit-button m-2">Edit</a>
+                              <a href="list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger shadow-none delete-button m-2">Delete</a>-->
+                               <!-- <a href="list/edit/<%= SurveyList[count]._id %>" class="btn btn-warning shadow-none edit-button m-2">Edit</a>
+
+                               <a href="list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger shadow-none delete-button m-2">Delete</a> -->
+
+                            </div>
+                        </td>
+                      </tr>
+                      <% }  %>
+                      
+                    </tbody>
+                  </table>
+          </div>
+      </div>
+  </div>
+
+  <%- include bottom_nav.ejs %>
+
+  <%- include footer.ejs %>

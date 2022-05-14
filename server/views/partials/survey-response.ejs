@@ -1,0 +1,46 @@
+<%- include header.ejs %>
+
+<%- include main_nav.ejs %>
+
+    <div class="container section-padding">
+      <div class="row justify-content-md-center">
+          <div class="col-lg-6">
+              <h1 class="lead text-center text-heading">Your Survey Response</h1>
+              <form  method="POST">
+                <input type="hidden" class="form-control" name="id" value="<%= survey.id %>">
+                <div class="mb-3">
+                  <label class="form-label">Your Full Name:</label>
+                  <input type="text" class="form-control"  required name="name" placeholder="Your Full Name" disabled="true" value="<%= surveyResponse.name %>" >
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Your Contact Number:</label>
+                  <input type="text" class="form-control" required name="phone" placeholder="Contact Number" disabled="true" value="<%= surveyResponse.phone %>" >
+                </div>
+                  <div class="mb-3">
+                    <label class="form-label"><%= survey.q1 %></label>
+                    <input type="text" class="form-control" required name="a1" placeholder="Answer" disabled="true" value="<%= surveyResponse.a1 %>" >
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"><%= survey.q2 %></label>
+                    <input type="text" class="form-control" required name="a2" placeholder="Answer" disabled="true" value="<%= surveyResponse.a2 %>" >
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"><%= survey.q3 %></label>
+                    <input type="text" class="form-control" required name="a3" placeholder="Answer" disabled="true" value="<%= surveyResponse.a3 %>" >
+                  </div>
+                  <div class="mb-5">
+                    <label class="form-label"><%= survey.q4 %></label>
+                    <input type="text" class="form-control" required name="a4" placeholder="Answer" disabled="true" value="<%= surveyResponse.a4 %>" >
+                  </div>
+                  <div class="text-center">
+                      <a href="/list" class="btn btn-primary shadow-none custom-button">Back to Survey List</a>
+                  </div>
+                  
+              </form>
+          </div>
+      </div>
+  </div>
+
+<%- include bottom_nav.ejs %>
+
+<%- include footer.ejs %>

@@ -1,0 +1,83 @@
+/* Custom CSS goes here */
+
+.navbar-custom {
+  background-color: #fff8f2;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav > li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#li-text-color {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.center {
+  margin: 0;
+  padding: 110px 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-padding
+{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.text-heading{
+  font-size: 2.6em;
+  font-weight: 300;
+  color: #4f4e4e;
+  text-transform: uppercase;
+}
+.small-heading{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.custom-button
+{
+  padding: 10px 40px;
+  font-size: 18px;
+}
+
+.form-control{
+  border: 1px solid #757779;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.form-label {  
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.table{
+  border-color: #626262;
+  font-size:24px;
+  font-weight: 300;
+}
+
+.edit-button{
+  padding: 10px 50px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+}
+.take-button{
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+}
+.delete-button{
+  padding: 10px 40px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+}

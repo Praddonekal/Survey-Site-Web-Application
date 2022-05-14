@@ -1,0 +1,60 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+  <div class="container section-padding">
+    <!-- Message Area -->
+    <%if (messages.length > 0) { %>
+    <div class="alert alert-danger">
+        <%= messages %>
+    </div>
+    <% } %>
+      <div class="row justify-content-md-center">
+          <div class="col-lg-6">
+              <h1 class="lead text-center text-heading">Signup</h1>
+              <form method="POST" autocomplete="off">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control"
+                      id="username" name="username" 
+                      placeholder="Enter username"
+                      required autofocus />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control"
+                      id="password" name="password"
+                      placeholder="Enter password"
+                      required>
+                  </div>
+                   <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control"
+                      id="email" name="email"
+                      placeholder="Enter Email Address"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="displayName" class="form-label">Display Name:</label>
+                    <input type="text" class="form-control"
+                      id="displayName" name="displayName"
+                      placeholder="Enter Display Name"
+                      required>
+                  </div>
+                  <div class="text-center">
+                      <!--<button class="btn btn-danger shadow-none custom-button"> <strong>Sign up</strong></button>-->
+                      <fieldset class="form-group mb-3 gap-2 d-md-flex justify-content-md-end">
+                        <input type="submit" class="btn btn-success" type ="submit" value="Register">
+                        <a href="/">
+                          <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                      </fieldset>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <%- include ../partials/bottom_nav.ejs %>
+
+  <%- include ../partials/footer.ejs %>

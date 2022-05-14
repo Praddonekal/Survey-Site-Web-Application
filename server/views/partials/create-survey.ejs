@@ -1,0 +1,46 @@
+<%- include header.ejs %>
+
+<%- include main_nav.ejs %>
+
+  <div class="container section-padding">
+      <div class="row justify-content-md-center">
+          <div class="col-lg-6">
+              <h1 class="lead text-center text-heading">Create A Survey</h1>
+              <form action="add" method="post">
+                  <div class="mb-3">
+                    <label class="form-label">Survey Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Survey Name">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Expiry Date</label>
+                    <input type="date" class="form-control" name="date" placeholder="Expiry Date">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Question 1</label>
+                    <input type="text" class="form-control" name="q1" placeholder="Question 1">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Question 2</label>
+                    <input type="text" class="form-control" name="q2" placeholder="Question 2">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Question 3</label>
+                    <input type="text" class="form-control" name="q3" placeholder="Question 3">
+                  </div>
+                  <div class="mb-5">
+                    <label class="form-label">Question 4</label>
+                    <input type="text" class="form-control" name="q4" placeholder="Question 4">
+                  </div>
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-primary shadow-none custom-button"><strong>Create</strong></button>
+                      <a href="/list/mysurvey" class="btn btn-danger shadow-none custom-button">Cancel</a>
+                  </div>
+                  
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <%- include bottom_nav.ejs %>
+
+  <%- include footer.ejs %>
